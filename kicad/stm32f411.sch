@@ -1,0 +1,768 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C C12
+U 1 1 607ABADF
+P 8000 1950
+F 0 "C12" V 7748 1950 50  0000 C CNN
+F 1 "0.1uF" V 7839 1950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8038 1800 50  0001 C CNN
+F 3 "" H 8000 1950 50  0001 C CNN
+F 4 "C14663" H 8000 1950 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 8000 1950 50  0001 C CNN "Field4"
+	1    8000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 607AD7E1
+P 9300 1900
+F 0 "C5" V 9048 1900 50  0000 C CNN
+F 1 "1uF" V 9139 1900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9338 1750 50  0001 C CNN
+F 3 "" H 9300 1900 50  0001 C CNN
+F 4 "C15849" H 9300 1900 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 9300 1900 50  0001 C CNN "Field4"
+	1    9300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 607ADD45
+P 7750 1950
+F 0 "C11" V 7498 1950 50  0000 C CNN
+F 1 "0.1uF" V 7589 1950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7788 1800 50  0001 C CNN
+F 3 "" H 7750 1950 50  0001 C CNN
+F 4 "C14663" H 7750 1950 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 7750 1950 50  0001 C CNN "Field4"
+	1    7750 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 607ADDB5
+P 8550 1850
+F 0 "C2" V 8298 1850 50  0000 C CNN
+F 1 "0.1uF" V 8389 1850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8588 1700 50  0001 C CNN
+F 3 "" H 8550 1850 50  0001 C CNN
+F 4 "C14663" H 8550 1850 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 8550 1850 50  0001 C CNN "Field4"
+	1    8550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 607AE00F
+P 7850 3650
+F 0 "C14" V 7800 3550 50  0000 C CNN
+F 1 "4.7uF" V 7800 3800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7888 3500 50  0001 C CNN
+F 3 "" H 7850 3650 50  0001 C CNN
+F 4 "C19666" H 7850 3650 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 7850 3650 50  0001 C CNN "Field4"
+F 6 "ESR < 1Ohm" V 7850 3650 50  0001 C CNN "Field6"
+	1    7850 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 607ADBD6
+P 7150 1950
+F 0 "C7" V 6898 1950 50  0000 C CNN
+F 1 "10uF" V 6989 1950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7188 1800 50  0001 C CNN
+F 3 "" H 7150 1950 50  0001 C CNN
+F 4 "C19702" H 7150 1950 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 7150 1950 50  0001 C CNN "Field4"
+	1    7150 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 60829B46
+P 1600 2700
+F 0 "SW1" H 1600 2985 50  0000 C CNN
+F 1 "SW_Push" H 1600 2894 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 1600 2900 50  0001 C CNN
+F 3 "~" H 1600 2900 50  0001 C CNN
+F 4 "C231329" H 1600 2700 50  0001 C CNN "LCSC Part"
+F 5 "no jlcpcb" H 1600 2700 50  0001 C CNN "Field4"
+	1    1600 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 6082A996
+P 2000 2000
+F 0 "D2" H 2000 1783 50  0000 C CNN
+F 1 "1N4148" H 2000 1874 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2000 2000 50  0001 C CNN
+F 3 "" H 2000 2000 50  0001 C CNN
+F 4 "C81598" H 2000 2000 50  0001 C CNN "LCSC Part"
+	1    2000 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6082CE55
+P 2400 2000
+F 0 "R2" V 2193 2000 50  0000 C CNN
+F 1 "330k" V 2284 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2330 2000 50  0001 C CNN
+F 3 "" H 2400 2000 50  0001 C CNN
+F 4 "1%" V 2400 2000 50  0001 C CNN "Field4"
+F 5 "C23137" H 2400 2000 50  0001 C CNN "LCSC Part"
+	1    2400 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6082DB26
+P 2650 1800
+F 0 "R1" H 2580 1754 50  0000 R CNN
+F 1 "1M" H 2580 1845 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2580 1800 50  0001 C CNN
+F 3 "" H 2650 1800 50  0001 C CNN
+F 4 "1%" H 2650 1800 50  0001 C CNN "Field4"
+F 5 "C22935" H 2650 1800 50  0001 C CNN "LCSC Part"
+	1    2650 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 6082E54A
+P 2150 2700
+F 0 "R23" V 2357 2700 50  0000 C CNN
+F 1 "2.2k" V 2266 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 2700 50  0001 C CNN
+F 3 "" H 2150 2700 50  0001 C CNN
+F 4 "C4190" H 2150 2700 50  0001 C CNN "LCSC Part"
+	1    2150 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 6082EC08
+P 2450 3000
+F 0 "R24" H 2520 3046 50  0000 L CNN
+F 1 "47k" H 2520 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2380 3000 50  0001 C CNN
+F 3 "" H 2450 3000 50  0001 C CNN
+F 4 "C25819" H 2450 3000 50  0001 C CNN "LCSC Part"
+	1    2450 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:MMBT3904 Q6
+U 1 1 60830623
+P 2650 2700
+F 0 "Q6" H 2841 2746 50  0000 L CNN
+F 1 "MMBT3904" H 2841 2655 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2850 2625 50  0001 L CIN
+F 3 "" H 2650 2700 50  0001 L CNN
+F 4 "C20526" H 2650 2700 50  0001 C CNN "LCSC Part"
+	1    2650 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 60844653
+P 3050 2450
+F 0 "R22" V 2843 2450 50  0000 C CNN
+F 1 "100" V 2934 2450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2980 2450 50  0001 C CNN
+F 3 "" H 3050 2450 50  0001 C CNN
+F 4 "C22775" H 3050 2450 50  0001 C CNN "LCSC Part"
+	1    3050 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 2700 1800 2000
+Wire Wire Line
+	1800 2000 1850 2000
+Wire Wire Line
+	2150 2000 2250 2000
+Wire Wire Line
+	2550 2000 2650 2000
+Wire Wire Line
+	2650 2000 2650 1950
+Wire Wire Line
+	2650 1650 2850 1650
+Wire Wire Line
+	2850 1650 2850 1600
+$Comp
+L Device:C C1
+U 1 1 608879BF
+P 2900 1800
+F 0 "C1" H 2785 1754 50  0000 R CNN
+F 1 "10uF" H 2785 1845 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2938 1650 50  0001 C CNN
+F 3 "" H 2900 1800 50  0001 C CNN
+F 4 "C19702" H 2900 1800 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 2900 1800 50  0001 C CNN "Field4"
+	1    2900 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 2000 2900 2000
+Wire Wire Line
+	2900 2000 2900 1950
+Connection ~ 2650 2000
+Wire Wire Line
+	2900 1650 2850 1650
+Connection ~ 2850 1650
+Wire Wire Line
+	2900 2000 3200 2000
+Connection ~ 2900 2000
+Wire Wire Line
+	1800 2700 2000 2700
+Connection ~ 1800 2700
+Wire Wire Line
+	2300 2700 2450 2700
+Wire Wire Line
+	2450 2850 2450 2700
+Connection ~ 2450 2700
+Wire Wire Line
+	2750 2900 2750 3150
+Wire Wire Line
+	2750 3150 2450 3150
+Wire Wire Line
+	2750 2500 2750 2450
+Wire Wire Line
+	2750 2450 2900 2450
+Wire Wire Line
+	3200 2450 3300 2450
+$Comp
+L Device:C C13
+U 1 1 608D8C29
+P 3300 2750
+F 0 "C13" H 3185 2704 50  0000 R CNN
+F 1 "0.1uF" H 3185 2795 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3338 2600 50  0001 C CNN
+F 3 "" H 3300 2750 50  0001 C CNN
+F 4 "C14663" H 3300 2750 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 3300 2750 50  0001 C CNN "Field4"
+	1    3300 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 2600 3300 2450
+Connection ~ 3300 2450
+Wire Wire Line
+	3300 2450 3450 2450
+Connection ~ 2750 3150
+Wire Wire Line
+	3300 3000 3300 2900
+Wire Wire Line
+	1400 2700 1350 2700
+Wire Wire Line
+	1350 2700 1350 2500
+$Comp
+L MCU_ST_STM32F4:STM32F411CCUx U2
+U 1 1 60973E5A
+P 8850 4550
+F 0 "U2" H 8800 6231 50  0000 C CNN
+F 1 "STM32F411CCUx" H 8800 6140 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 8250 3050 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00115249.pdf" H 8850 4550 50  0001 C CNN
+F 4 "C190642" H 8850 4550 50  0001 C CNN "LCSC Part"
+	1    8850 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 3050 8650 2800
+Wire Wire Line
+	8650 2800 8750 2800
+Wire Wire Line
+	8750 3050 8750 2800
+Connection ~ 8750 2800
+Wire Wire Line
+	8750 2800 8850 2800
+Wire Wire Line
+	8850 3050 8850 2800
+Connection ~ 8850 2800
+Wire Wire Line
+	8850 2800 8950 2800
+Wire Wire Line
+	8950 3050 8950 2800
+Connection ~ 8950 2800
+Wire Wire Line
+	8950 2800 9050 2800
+Wire Wire Line
+	9050 3050 9050 2800
+Wire Wire Line
+	8650 6150 8650 6250
+Wire Wire Line
+	8650 6250 8700 6250
+Wire Wire Line
+	8750 6250 8750 6150
+Wire Wire Line
+	8850 6150 8850 6250
+Wire Wire Line
+	8850 6250 8750 6250
+Connection ~ 8750 6250
+Wire Wire Line
+	8950 6150 8950 6250
+Wire Wire Line
+	8950 6250 8850 6250
+Connection ~ 8850 6250
+Wire Wire Line
+	9050 6150 9050 6250
+Wire Wire Line
+	9050 6250 8950 6250
+Connection ~ 8950 6250
+$Comp
+L Device:C C10
+U 1 1 60AE935F
+P 7500 1950
+F 0 "C10" V 7248 1950 50  0000 C CNN
+F 1 "0.1uF" V 7339 1950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7538 1800 50  0001 C CNN
+F 3 "" H 7500 1950 50  0001 C CNN
+F 4 "C14663" H 7500 1950 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 7500 1950 50  0001 C CNN "Field4"
+	1    7500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 60B1CE68
+P 7150 3850
+F 0 "Y1" V 7104 4094 50  0000 L CNN
+F 1 "8MHz" V 7195 4094 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm" H 7150 3850 50  0001 C CNN
+F 3 "" H 7150 3850 50  0001 C CNN
+F 4 "C115962" H 7150 3850 50  0001 C CNN "LCSC Part"
+	1    7150 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Crystal Y2
+U 1 1 60B1FBC4
+P 7300 4450
+F 0 "Y2" V 7254 4581 50  0000 L CNN
+F 1 "32.768KHz" V 7345 4581 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm" H 7300 4450 50  0001 C CNN
+F 3 "" H 7300 4450 50  0001 C CNN
+F 4 "C32346" H 7300 4450 50  0001 C CNN "LCSC Part"
+	1    7300 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 60B5908A
+P 7600 3650
+F 0 "#PWR017" H 7600 3400 50  0001 C CNN
+F 1 "GND" H 7605 3477 50  0000 C CNN
+F 2 "" H 7600 3650 50  0001 C CNN
+F 3 "" H 7600 3650 50  0001 C CNN
+	1    7600 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7600 3650 7700 3650
+Wire Wire Line
+	8150 3950 7700 3950
+Wire Wire Line
+	7700 3950 7700 4000
+Wire Wire Line
+	7700 4000 7150 4000
+Wire Wire Line
+	8150 3850 7450 3850
+Wire Wire Line
+	7450 3850 7450 3700
+Wire Wire Line
+	7450 3700 7150 3700
+Wire Wire Line
+	8150 4250 7300 4250
+Wire Wire Line
+	7300 4250 7300 4300
+Wire Wire Line
+	8150 4350 7600 4350
+Wire Wire Line
+	7600 4350 7600 4600
+Wire Wire Line
+	7600 4600 7300 4600
+$Comp
+L Device:C C15
+U 1 1 60C16185
+P 6800 3700
+F 0 "C15" V 6548 3700 50  0000 C CNN
+F 1 "20pF" V 6639 3700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6838 3550 50  0001 C CNN
+F 3 "" H 6800 3700 50  0001 C CNN
+F 4 "C1648" H 6800 3700 50  0001 C CNN "LCSC Part"
+	1    6800 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 60C16CC0
+P 6800 4000
+F 0 "C16" V 6850 4100 50  0000 C CNN
+F 1 "20pF" V 6850 3850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6838 3850 50  0001 C CNN
+F 3 "" H 6800 4000 50  0001 C CNN
+F 4 "C1648" H 6800 4000 50  0001 C CNN "LCSC Part"
+	1    6800 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C17
+U 1 1 60C186E4
+P 6800 4250
+F 0 "C17" V 6850 4350 50  0000 C CNN
+F 1 "1.5pF" V 6950 4250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6838 4100 50  0001 C CNN
+F 3 "" H 6800 4250 50  0001 C CNN
+F 4 "C1639" H 6800 4250 50  0001 C CNN "LCSC Part"
+	1    6800 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C18
+U 1 1 60C19483
+P 6800 4600
+F 0 "C18" V 6850 4750 50  0000 C CNN
+F 1 "1.5pF" V 6950 4600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6838 4450 50  0001 C CNN
+F 3 "" H 6800 4600 50  0001 C CNN
+F 4 "C1639" H 6800 4600 50  0001 C CNN "LCSC Part"
+	1    6800 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 4250 6950 4250
+Connection ~ 7300 4250
+Wire Wire Line
+	7300 4600 6950 4600
+Connection ~ 7300 4600
+$Comp
+L power:GND #PWR016
+U 1 1 60C4A5BB
+P 6500 3650
+F 0 "#PWR016" H 6500 3400 50  0001 C CNN
+F 1 "GND" H 6505 3477 50  0000 C CNN
+F 2 "" H 6500 3650 50  0001 C CNN
+F 3 "" H 6500 3650 50  0001 C CNN
+	1    6500 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6650 3700 6500 3700
+Wire Wire Line
+	6500 3700 6500 3650
+Wire Wire Line
+	6650 4000 6500 4000
+Connection ~ 6500 3700
+Wire Wire Line
+	6950 3700 7150 3700
+Connection ~ 7150 3700
+Wire Wire Line
+	7150 4000 6950 4000
+Connection ~ 7150 4000
+$Comp
+L power:GND #PWR031
+U 1 1 60CAF39E
+P 6500 4600
+F 0 "#PWR031" H 6500 4350 50  0001 C CNN
+F 1 "GND" H 6505 4427 50  0000 C CNN
+F 2 "" H 6500 4600 50  0001 C CNN
+F 3 "" H 6500 4600 50  0001 C CNN
+	1    6500 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 4250 6500 4250
+Wire Wire Line
+	6500 4250 6500 4600
+Wire Wire Line
+	6650 4600 6500 4600
+Connection ~ 6500 4600
+Wire Wire Line
+	7750 1700 7500 1700
+Wire Wire Line
+	7150 1700 7150 1800
+Wire Wire Line
+	7500 1800 7500 1700
+Connection ~ 7500 1700
+Wire Wire Line
+	7500 1700 7400 1700
+Wire Wire Line
+	7750 1800 7750 1700
+Connection ~ 7750 1700
+Wire Wire Line
+	8000 1700 8000 1800
+Wire Wire Line
+	7750 1700 8000 1700
+Wire Wire Line
+	8000 2100 7750 2100
+Connection ~ 7500 2100
+Wire Wire Line
+	7500 2100 7150 2100
+Connection ~ 7750 2100
+Wire Wire Line
+	7750 2100 7500 2100
+Wire Wire Line
+	7500 2250 7500 2100
+Wire Wire Line
+	8550 2050 8550 2000
+$Comp
+L Device:C C6
+U 1 1 60F19F47
+P 9600 1900
+F 0 "C6" V 9348 1900 50  0000 C CNN
+F 1 "0.1uF" V 9439 1900 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9638 1750 50  0001 C CNN
+F 3 "" H 9600 1900 50  0001 C CNN
+F 4 "C14663" H 9600 1900 50  0001 C CNN "LCSC Part"
+F 5 "0603" H 9600 1900 50  0001 C CNN "Field4"
+	1    9600 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 1750 9600 1750
+Connection ~ 9300 1750
+Wire Wire Line
+	9600 2050 9300 2050
+Connection ~ 9300 2050
+Wire Wire Line
+	8000 3450 8150 3450
+Wire Wire Line
+	7950 3250 8150 3250
+NoConn ~ 9450 4850
+NoConn ~ 9450 4950
+NoConn ~ 8150 4150
+Wire Wire Line
+	8000 3650 8150 3650
+Text Label 8100 3650 1    50   ~ 0
+VCAP1
+Wire Wire Line
+	5400 5850 5750 5850
+Wire Wire Line
+	5400 5950 5750 5950
+Wire Notes Line
+	850  1000 4200 1000
+Wire Notes Line
+	4200 1000 4200 3900
+Wire Notes Line
+	4200 3900 850  3900
+Wire Notes Line
+	850  3900 850  1000
+Text Notes 950  1300 0    118  ~ 0
+Reset Circuit\n
+Text Label 3200 2000 0    50   ~ 0
+BOOT0
+Text Label 8000 3450 2    50   ~ 0
+BOOT0
+Text Label 3450 2450 0    50   ~ 0
+NRST
+Text Label 7950 3250 2    50   ~ 0
+NRST
+Text HLabel 8050 4550 0    50   BiDi ~ 0
+PB0
+Wire Wire Line
+	8050 4550 8150 4550
+Wire Wire Line
+	8050 4650 8150 4650
+Wire Wire Line
+	8050 4750 8150 4750
+Wire Wire Line
+	8050 4850 8150 4850
+Wire Wire Line
+	8050 4950 8150 4950
+Wire Wire Line
+	8050 5050 8150 5050
+Wire Wire Line
+	8050 5150 8150 5150
+Wire Wire Line
+	8050 5250 8150 5250
+Wire Wire Line
+	8050 5350 8150 5350
+Wire Wire Line
+	8050 5450 8150 5450
+Wire Wire Line
+	8050 5550 8150 5550
+Wire Wire Line
+	8050 5650 8150 5650
+Wire Wire Line
+	8050 5750 8150 5750
+Wire Wire Line
+	8050 5850 8150 5850
+Wire Wire Line
+	8050 5950 8150 5950
+Text HLabel 9500 4450 2    50   BiDi ~ 0
+PA0
+Text HLabel 9500 4550 2    50   BiDi ~ 0
+PA1
+Text HLabel 9500 4650 2    50   BiDi ~ 0
+PA2
+Text HLabel 9500 4750 2    50   BiDi ~ 0
+PA3
+Text HLabel 9500 4850 2    50   BiDi ~ 0
+PA4
+Text HLabel 9500 4950 2    50   BiDi ~ 0
+PA5
+Text HLabel 9500 5050 2    50   BiDi ~ 0
+PA6
+Text HLabel 9500 5150 2    50   BiDi ~ 0
+PA7
+Text HLabel 9500 5250 2    50   BiDi ~ 0
+PA8
+Text HLabel 9500 5350 2    50   BiDi ~ 0
+PA9
+Text HLabel 9500 5450 2    50   BiDi ~ 0
+PA10
+Text HLabel 9500 5950 2    50   BiDi ~ 0
+PA15
+Text HLabel 8050 4650 0    50   BiDi ~ 0
+PB1
+Text HLabel 8050 4750 0    50   BiDi ~ 0
+PB2
+Text HLabel 8050 4850 0    50   BiDi ~ 0
+PB3
+Text HLabel 8050 4950 0    50   BiDi ~ 0
+PB4
+Text HLabel 8050 5050 0    50   BiDi ~ 0
+PB5
+Text HLabel 8050 5150 0    50   BiDi ~ 0
+PB6
+Text HLabel 8050 5250 0    50   BiDi ~ 0
+PB7
+Text HLabel 8050 5350 0    50   BiDi ~ 0
+PB8
+Text HLabel 8050 5450 0    50   BiDi ~ 0
+PB9
+Text HLabel 8050 5550 0    50   BiDi ~ 0
+PB10
+Text HLabel 8050 5650 0    50   BiDi ~ 0
+PB12
+Text HLabel 8050 5750 0    50   BiDi ~ 0
+PB13
+Text HLabel 8050 5850 0    50   BiDi ~ 0
+PB14
+Text HLabel 8050 5950 0    50   BiDi ~ 0
+PB15
+Text HLabel 5400 5850 0    50   BiDi ~ 0
+PA13SWDIO
+Text HLabel 5400 5950 0    50   BiDi ~ 0
+PA14SWCLK
+Wire Wire Line
+	9450 4450 9500 4450
+Wire Wire Line
+	9450 4550 9500 4550
+Wire Wire Line
+	9450 4650 9500 4650
+Wire Wire Line
+	9450 4750 9500 4750
+Wire Wire Line
+	9450 4850 9500 4850
+Wire Wire Line
+	9450 4950 9500 4950
+Wire Wire Line
+	9450 5050 9500 5050
+Wire Wire Line
+	9450 5150 9500 5150
+Wire Wire Line
+	9450 5250 9500 5250
+Wire Wire Line
+	9450 5350 9500 5350
+Wire Wire Line
+	9450 5450 9500 5450
+Wire Wire Line
+	9450 5550 9500 5550
+Wire Wire Line
+	9450 5650 9500 5650
+Wire Wire Line
+	9450 5750 9500 5750
+Wire Wire Line
+	9450 5850 9500 5850
+Wire Wire Line
+	9450 5950 9500 5950
+Text HLabel 9500 5650 2    50   BiDi ~ 0
+Dp
+Text HLabel 9500 5550 2    50   BiDi ~ 0
+Dm
+Text HLabel 5750 5850 2    50   BiDi ~ 0
+SWDIO
+Text HLabel 5750 5950 2    50   BiDi ~ 0
+SWCLK
+Text HLabel 5350 1100 0    50   Input ~ 0
+VDD
+Text Label 5600 1100 0    50   ~ 0
+VDD
+Wire Wire Line
+	5350 1100 5600 1100
+Text Label 1350 2500 2    50   ~ 0
+VDD
+Text Label 9050 2600 0    50   ~ 0
+VDD
+Wire Wire Line
+	9050 2600 9050 2800
+Connection ~ 9050 2800
+Text Label 7400 1450 0    50   ~ 0
+VDD
+Text Label 8550 1550 0    50   ~ 0
+VDD
+Text Label 9300 1550 0    50   ~ 0
+VDD
+Wire Wire Line
+	7400 1700 7400 1450
+Connection ~ 7400 1700
+Wire Wire Line
+	7400 1700 7150 1700
+Wire Wire Line
+	8550 1550 8550 1700
+Wire Wire Line
+	9300 1550 9300 1750
+Text HLabel 5350 1300 0    50   Input ~ 0
+GND
+Text Label 5600 1300 0    50   ~ 0
+GND
+Wire Wire Line
+	5350 1300 5600 1300
+Text Label 2850 1600 0    50   ~ 0
+GND
+Text Label 3300 3000 0    50   ~ 0
+GND
+Text Label 2750 3400 0    50   ~ 0
+GND
+Wire Wire Line
+	2750 3150 2750 3400
+Text Label 7500 2250 0    50   ~ 0
+GND
+Text Label 8550 2050 0    50   ~ 0
+GND
+Text Label 9300 2200 0    50   ~ 0
+GND
+Wire Wire Line
+	9300 2050 9300 2200
+Text Label 8700 6450 0    50   ~ 0
+GND
+Wire Wire Line
+	8700 6450 8700 6250
+Connection ~ 8700 6250
+Wire Wire Line
+	8700 6250 8750 6250
+Text HLabel 9500 5750 2    50   BiDi ~ 0
+PA13SWDIO
+Text HLabel 9500 5850 2    50   BiDi ~ 0
+PA14SWCLK
+Wire Wire Line
+	6500 3700 6500 4000
+$EndSCHEMATC
