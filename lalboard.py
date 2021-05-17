@@ -44,13 +44,13 @@ def tapered_box(bottom_x, bottom_y, top_x, top_y, height, name):
 
 
 def horizontal_rotated_magnet_cutout(depth=1.8, name="magnet_cutout"):
-    result = tapered_box(1.45, 1.45, 1.7, 1.7, depth, name=name).rx(90).ry(45)
+    result = tapered_box(1.5, 1.5, 1.8, 1.8, depth, name=name).rx(90).ry(45)
     result.add_named_faces("front", result.top)
     return result
 
 
-def horizontal_magnet_cutout(depth=1.8, name="magnet_cutout"):
-    return tapered_box(1.45, 1.8, 1.7, 1.8, depth, name=name).rx(90)
+def horizontal_magnet_cutout(depth=1.9, name="magnet_cutout"):
+    return tapered_box(1.5, 1.8, 1.8, 1.8, depth, name=name).rx(90)
 
 
 def horizontal_tiny_magnet_cutout(depth=1.3, name="magnet_cutout"):
@@ -380,7 +380,7 @@ def base_cluster_design():
         (-center_nub_hole == +center_hole) + .8,
         +center_nub_hole == +combined_cluster)
 
-    central_magnet_cutout = horizontal_magnet_cutout(name="central_magnet_cutout")
+    central_magnet_cutout = horizontal_magnet_cutout(name="central_magnet_cutout").rz(180)
     central_magnet_cutout.place(~central_magnet_cutout == ~center_hole,
                                 +central_magnet_cutout == -center_hole,
                                 (~central_magnet_cutout == +combined_cluster) - 3.5)
@@ -827,7 +827,7 @@ def center_key():
                          -key_rim_hollow == -key_rim)
     key_rim = Difference(key_rim, key_rim_hollow)
 
-    center_post = Box(5 - .2, 5 - .1, post_length + key_rim_height, name="center_post")
+    center_post = Box(5 - .4, 5 - .3, post_length + key_rim_height, name="center_post")
     center_post = Fillet(
         center_post.shared_edges(
             [center_post.front, center_post.back],
@@ -865,9 +865,9 @@ def center_key():
 
 
 def vertical_key_post(post_length, groove_height, groove_width, magnet_height):
-    post = Box(post_width, post_length - key_thickness/2, key_thickness, name="post")
+    post = Box(post_width - 0.2, post_length - key_thickness/2, key_thickness, name="post")
 
-    pivot = Cylinder(post_width, key_thickness/2, name="pivot")
+    pivot = Cylinder(post_width - 0.2, key_thickness/2, name="pivot")
     pivot.ry(90)
     pivot.place(
         ~pivot == ~post,
