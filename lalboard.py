@@ -44,13 +44,13 @@ def tapered_box(bottom_x, bottom_y, top_x, top_y, height, name):
 
 
 def horizontal_rotated_magnet_cutout(depth=1.8, name="magnet_cutout"):
-    result = tapered_box(1.5, 1.5, 1.8, 1.8, depth, name=name).rx(90).ry(45)
+    result = tapered_box(1.45, 1.45, 1.7, 1.7, depth, name=name).rx(90).ry(45)
     result.add_named_faces("front", result.top)
     return result
 
 
-def horizontal_magnet_cutout(depth=1.9, name="magnet_cutout"):
-    return tapered_box(1.5, 1.8, 1.8, 1.8, depth, name=name).rx(90)
+def horizontal_magnet_cutout(depth=1.8, name="magnet_cutout"):
+    return tapered_box(1.45, 1.5, 1.6, 1.6, depth, name=name).rx(90)
 
 
 def horizontal_tiny_magnet_cutout(depth=1.3, name="magnet_cutout"):
@@ -66,7 +66,7 @@ def vertical_magnet_cutout(depth=1.6, name="magnet_cutout"):
 
 
 def vertical_rotated_magnet_cutout(depth=1.6, name="magnet_cutout"):
-    result = tapered_box(1.7, 1.7, 1.8, 1.8, depth, name).rz(45)
+    result = tapered_box(1.6, 1.6, 1.8, 1.8, depth, name).rz(45)
     result.add_named_faces("front", result.top)
     return result
 
@@ -827,7 +827,7 @@ def center_key():
                          -key_rim_hollow == -key_rim)
     key_rim = Difference(key_rim, key_rim_hollow)
 
-    center_post = Box(5 - .4, 5 - .3, post_length + key_rim_height, name="center_post")
+    center_post = Box(5 - .5, 5 - .4, post_length + key_rim_height, name="center_post")
     center_post = Fillet(
         center_post.shared_edges(
             [center_post.front, center_post.back],
@@ -842,7 +842,7 @@ def center_key():
     interruptor_post = Box(3.5, 2, .65 + key_travel + key_rim_height, name="interruptor_post")
     interruptor_post.place(
         ~interruptor_post == ~key,
-        (-interruptor_post == +center_post) + 1.2,
+        (-interruptor_post == +center_post) + 1.3,
         -interruptor_post == +key)
     fillet_edges = interruptor_post.shared_edges(
         [interruptor_post.top, interruptor_post.back, interruptor_post.right, interruptor_post.left],
@@ -865,9 +865,9 @@ def center_key():
 
 
 def vertical_key_post(post_length, groove_height, groove_width, magnet_height):
-    post = Box(post_width - 0.2, post_length - key_thickness/2, key_thickness, name="post")
+    post = Box(post_width - 0.1, post_length - key_thickness/2, key_thickness, name="post")
 
-    pivot = Cylinder(post_width - 0.2, key_thickness/2, name="pivot")
+    pivot = Cylinder(post_width - 0.1, key_thickness/2, name="pivot")
     pivot.ry(90)
     pivot.place(
         ~pivot == ~post,
@@ -879,7 +879,7 @@ def vertical_key_post(post_length, groove_height, groove_width, magnet_height):
                  (~magnet == -pivot) + magnet_height + key_thickness/2,
                  +magnet == +post)
 
-    groove_depth = .7
+    groove_depth = .8
     groove = Box(post.size().x, groove_width, groove_depth, name="groove")
     groove.place(~groove == ~post,
                  (-groove == -pivot) + groove_height + key_thickness/2,
@@ -945,7 +945,7 @@ def side_key(key_height, key_angle, name):
         key_protrusion=False,
         key_displacement=False,
         groove_height=1.353,
-        groove_width=.75,
+        groove_width=.8,
         magnet_height=5.4,
         name=name)
 
@@ -2477,8 +2477,9 @@ def run_design(design_func, message_box_on_error=False, print_runtime=True, docu
     """
     if not document_name:
         frame = inspect.stack()[1]
-        module = inspect.getmodule(frame[0])
-        filename = module.__file__
+        # module = inspect.getmodule(frame[0])
+        # filename = module.__file__
+        filename = frame[1]
         document_name = pathlib.Path(filename).stem
 
     import fscad
