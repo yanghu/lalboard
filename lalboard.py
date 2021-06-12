@@ -50,7 +50,7 @@ class Lalboard(MemoizableDesign):
         return Loft(bottom_face, top_face, name=name)
 
     def horizontal_rotated_magnet_cutout(self, depth=1.8, name="magnet_cutout"):
-        result = self.tapered_box(1.45, 1.45, 1.7, 1.7, depth, name=name).rx(90).ry(45)
+        result = self.tapered_box(1.55, 1.55, 1.7, 1.7, depth, name=name).rx(90).ry(45)
         result.add_named_faces("front", result.top)
         return result
 
