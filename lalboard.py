@@ -55,7 +55,7 @@ class Lalboard(MemoizableDesign):
         return result
 
     def horizontal_magnet_cutout(self, depth=1.8, name="magnet_cutout"):
-        return self.tapered_box(1.45, 1.8, 1.7, 1.8, depth, name=name).rx(90)
+        return self.tapered_box(1.45, 1.5, 1.7, 1.7, depth, name=name).rx(90)
 
     def horizontal_tiny_magnet_cutout(self, depth=1.3, name="magnet_cutout"):
         return self.tapered_box(.9, 1.2, 1.1, 1.2, depth, name=name).rx(90)
@@ -64,7 +64,7 @@ class Lalboard(MemoizableDesign):
         return self.tapered_box(1.55, 1.55, 1.7, 1.7, depth, name)
 
     def vertical_rotated_magnet_cutout(self, depth=1.6, name="magnet_cutout"):
-        result = self.tapered_box(1.7, 1.7, 1.8, 1.8, depth, name).rz(45)
+        result = self.tapered_box(1.6, 1.6, 1.7, 1.7, depth, name).rz(45)
         result.add_named_faces("front", result.top)
         return result
 
@@ -419,7 +419,7 @@ class Lalboard(MemoizableDesign):
             (-center_nub_hole == +center_hole) + .8,
             +center_nub_hole == +combined_cluster)
 
-        central_magnet_cutout = self.horizontal_magnet_cutout(name="central_magnet_cutout")
+        central_magnet_cutout = self.horizontal_magnet_cutout(name="central_magnet_cutout").rz(180)
         central_magnet_cutout.place(~central_magnet_cutout == ~center_hole,
                                     +central_magnet_cutout == -center_hole,
                                     (~central_magnet_cutout == +combined_cluster) - 3.5)
@@ -798,7 +798,7 @@ class Lalboard(MemoizableDesign):
                              -key_rim_hollow == -key_rim)
         key_rim = Difference(key_rim, key_rim_hollow)
 
-        center_post = Box(5 - .2, 5 - .1, post_length + key_rim_height, name="center_post")
+        center_post = Box(5 - .5, 5 - .4, post_length + key_rim_height, name="center_post")
         center_post = Fillet(
             center_post.shared_edges(
                 [center_post.front, center_post.back],
@@ -813,7 +813,7 @@ class Lalboard(MemoizableDesign):
         interruptor_post = Box(3.5, 2, .65 + key_travel + key_rim_height, name="interruptor_post")
         interruptor_post.place(
             ~interruptor_post == ~key,
-            (-interruptor_post == +center_post) + 1.2,
+            (-interruptor_post == +center_post) + 1.3,
             -interruptor_post == +key)
         fillet_edges = interruptor_post.shared_edges(
             [interruptor_post.top, interruptor_post.back, interruptor_post.right, interruptor_post.left],
@@ -835,9 +835,9 @@ class Lalboard(MemoizableDesign):
         return result
 
     def vertical_key_post(self, post_length, groove_height, groove_width, magnet_height):
-        post = Box(post_width, post_length - key_thickness/2, key_thickness, name="post")
+        post = Box(post_width - 0.1, post_length - key_thickness/2, key_thickness, name="post")
 
-        pivot = Cylinder(post_width, key_thickness/2, name="pivot")
+        pivot = Cylinder(post_width - 0.1, key_thickness/2, name="pivot")
         pivot.ry(90)
         pivot.place(
             ~pivot == ~post,
@@ -849,7 +849,7 @@ class Lalboard(MemoizableDesign):
                      (~magnet == -pivot) + magnet_height + key_thickness/2,
                      +magnet == +post)
 
-        groove_depth = .7
+        groove_depth = .8
         groove = Box(post.size().x, groove_width, groove_depth, name="groove")
         groove.place(~groove == ~post,
                      (-groove == -pivot) + groove_height + key_thickness/2,
@@ -913,7 +913,7 @@ class Lalboard(MemoizableDesign):
             key_protrusion=False,
             key_displacement=False,
             groove_height=1.353,
-            groove_width=.75,
+            groove_width=.8,
             magnet_height=5.4,
             name=name)
 
@@ -3400,8 +3400,9 @@ def run_design(design_func, message_box_on_error=False, print_runtime=True, docu
     """
     if not document_name:
         frame = inspect.stack()[1]
-        module = inspect.getmodule(frame[0])
-        filename = module.__file__
+        # module = inspect.getmodule(frame[0])
+        # filename = module.__file__
+        filename = frame[1]
         document_name = pathlib.Path(filename).stem
 
     import fscad

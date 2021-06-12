@@ -26,7 +26,7 @@ relative_import("../lalboard.py")
 import lalboard
 
 # List of the names of the parts to export. An empty list will export all parts.
-parts_to_export = []
+parts_to_export = ["cluster", "cluster_key_short", "cluster_key_tall", "cluster_key_center"]
 
 export_assembly_f3ds = False
 
@@ -47,7 +47,10 @@ def run(_):
         for file in sorted(os.scandir(os.path.dirname(__file__)), key=lambda entry: entry.name):
             if file.is_dir():
                 if (file.name.startswith("_") or file.name == "__pycache__" or
-                        file.name == "scene" or file.name.endswith("pcb")):
+                        file.name == "scene" or file.name.endswith("pcb")) or
+                        file.name.startswith(".") or
+                        file.name.endswidth("sketch") or
+                        file.name.endswidth("assembly")):
                     continue
 
                 export_sketch = False
