@@ -1,7 +1,22 @@
 fp-info-cache
 *.kicad_pcb-bak
 *.sch-bak
+*.pro-bak
 *.net
 thumb_cluster_left-cache.lib
 thumb_cluster_right-cache.lib
 cluster-cache.lib
+*-drc.txt
+*-erc.txt
+*.csv
+*.xml
+*~
+
+# artifacts generated from kicad-export
+docs/
+fab/
+kibot_errors.filter
+
+# kicad rescue files
+*-rescue.dcm
+*-rescue.lib
